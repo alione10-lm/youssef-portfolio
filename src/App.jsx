@@ -1,0 +1,24 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Applayout from "./components/Applayout";
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
+import Education from "./pages/Education";
+import Contact from "./pages/Contact";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Applayout />}>
+          <Route index element={<Navigate to="home" />} />
+          <Route path="home" element={<Home />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="education" element={<Education />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
