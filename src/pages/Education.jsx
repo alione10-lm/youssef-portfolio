@@ -8,7 +8,7 @@ function Education() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-2 py-20 md:py-20 md:px-16"
+      className="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-2 py-10 md:py-20 md:px-16"
     >
       <Item>
         <Heading>

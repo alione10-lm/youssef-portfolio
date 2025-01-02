@@ -4,15 +4,6 @@ import { LuCheck } from "react-icons/lu";
 
 const items = [
   {
-    title: "Process Engineering:",
-    content: [
-      "Process Modeling and Simulation",
-      "Study, Sizing, and Performance Improvement of Industrial Processes",
-      "Unit Operations, Chemical Reactor, Heat Transfer, Matter, Energy, and Motion",
-      "Fluid Mechanics, Rheology of Complex Fluids, Physical and Chemical Thermodynamics",
-    ],
-  },
-  {
     title: "Polymers, Formulation, and IndustrialChemistry :",
     content: [
       "Polymers, Macromolecular and Organic Synthesis,Adhesives,Packaging, Paints, Varnishes",
@@ -20,6 +11,15 @@ const items = [
       "Materials, Electrochemistry, Corrosion and Surface Treatment",
       "Management of Quality",
       "Analytical Methods (UV-Visible, IR,NMR, XRD, X-rays, etc.)",
+    ],
+  },
+  {
+    title: "Process Engineering:",
+    content: [
+      "Process Modeling and Simulation",
+      "Study, Sizing, and Performance Improvement of Industrial Processes",
+      "Unit Operations, Chemical Reactor, Heat Transfer, Matter, Energy, and Motion",
+      "Fluid Mechanics, Rheology of Complex Fluids, Physical and Chemical Thermodynamics",
     ],
   },
 ];
@@ -47,7 +47,7 @@ function Item({ title, content }) {
       </p>
       <ul className="flex divide-y  flex-col  items-start  ">
         {content.map((el, ndx) => (
-          <li key={ndx} className=" py-2 text-slate-700 text-xs md:text-[1rem]">
+          <li key={ndx} className=" py-2 text-slate-700 text-sm md:text-[1rem]">
             {el}.
           </li>
         ))}

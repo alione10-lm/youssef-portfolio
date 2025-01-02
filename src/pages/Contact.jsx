@@ -9,7 +9,7 @@ function Contact() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="h-full w-full pt-14 md:pt-20"
+      className="h-full w-full py-10 md:pt-20"
     >
       <div>
         <h1 className="text-center md:mb-6 mb-4 font-semibold text-blue-600 md:text-xl text-sm">

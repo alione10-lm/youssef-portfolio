@@ -11,18 +11,18 @@ function Skills() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="skills_navigation flex flex-col  items-start w-full pt-16 md:pt-20 "
+      className="skills_navigation flex flex-col items-center md:items-start w-full pt-16 md:pt-20 "
     >
-      <div className="flex items-center gap-5 text-xm md:text-lg text-slate-400">
+      <div className="flex items-center md:justify-normal justify-between w-full gap-5 text-xm md:text-lg text-slate-400">
         <NavLink
-          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex gap-1 items-center"
+          className="text-xs border-b pb-2 flex-col md:flex-row md:text-[1rem] flex gap-1 items-center"
           to="personal"
         >
           <LuPersonStanding />
           Peronal
         </NavLink>
         <NavLink
-          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex items-center gap-1 md:gap-2"
+          className="text-xs pb-2  border-b flex-col md:flex-row md:text-[1rem] flex items-center gap-1 md:gap-2"
           to="technical"
         >
           <LuWrench />
@@ -30,14 +30,14 @@ function Skills() {
         </NavLink>
         <NavLink
           to="professional"
-          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
+          className="text-xs pb-2   border-b flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
         >
           <GiSchoolBag />
           Professional
         </NavLink>
         <NavLink
           to="languages"
-          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
+          className="text-xs pb-2  border-b flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
         >
           <LuLanguages />
           Languages
