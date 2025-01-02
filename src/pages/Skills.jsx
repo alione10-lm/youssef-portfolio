@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { variants } from "../services/config";
-import { Link, NavLink, Outlet } from "react-router-dom";
-import { LuPersonStanding, LuWrench } from "react-icons/lu";
+import { NavLink, Outlet } from "react-router-dom";
+import { LuLanguages, LuPersonStanding, LuWrench } from "react-icons/lu";
 import { GiSchoolBag } from "react-icons/gi";
 
 function Skills() {
@@ -11,64 +11,50 @@ function Skills() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="skills_navigation flex flex-col divide-y  items-start w-full pt-20 "
+      className="skills_navigation flex flex-col  items-start w-full pt-16 md:pt-20 "
     >
-      <div className="flex items-center gap-5 pb-  text-sm md:text-lg text-slate-400">
-        <NavLink className="flex gap-1 items-center" to="personal">
+      <div className="flex items-center gap-5 text-xm md:text-lg text-slate-400">
+        <NavLink
+          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex gap-1 items-center"
+          to="personal"
+        >
           <LuPersonStanding />
           Peronal
         </NavLink>
-        <NavLink className="flex items-center gap-1 md:gap-2" to="technical">
+        <NavLink
+          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex items-center gap-1 md:gap-2"
+          to="technical"
+        >
           <LuWrench />
           technical
         </NavLink>
-        <NavLink to="professional" className="flex items-center gap-1">
+        <NavLink
+          to="professional"
+          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
+        >
           <GiSchoolBag />
           Professional
         </NavLink>
-        <NavLink to="languages">Languages</NavLink>
+        <NavLink
+          to="languages"
+          className="text-xs pb-2 flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
+        >
+          <LuLanguages />
+          Languages
+        </NavLink>
       </div>
-      <div className="p-5  w-full min-h-[10rem]">
+      <div className="py-2 md:p-10 overflow-scroll max-h-[70vh]  w-full min-h-[10rem]">
         <Outlet />
       </div>
     </motion.section>
-    // <motion.section
-    //   initial="hidden"
-    //   animate="visible"
-    //   variants={variants}
-    //   transition={{ duration: 0.8, ease: "easeInOut" }}
-    //   className="w-full  bg-slate-100   grid gap-4 grid-cols-2"
-    // >
-    //   <Title>Professional</Title>
-    //   <Content>
-    //     <p>
-    //       MATLAB, Python, Origin, Aspen Plus and HYSYS, COMSOL Multiphysics,
-    //       Gaussian
-    //     </p>
-    //     <p>Ms Office: Excel, Word, PowerPoint</p>
-    //     <p>Adobe: Photoshop, Illustrator</p>
-    //   </Content>
-    //   <Content>
-    //     Management <br /> Leadership <br /> Realiability <br /> Creativity
-    //   </Content>
-    //   <Title>Personal</Title>
-    //   <Title>languages</Title>
-    //   <Content>
-    //     Arabic: Native <br />
-    //     French: Advanced (C1) <br />
-    //     English: Professional (B2) <br />
-    //   </Content>
-    //   <Content>content</Content>
-    //   <Title>title</Title>
-    // </motion.section>
   );
 }
 
-function Title({ children }) {
-  return <p className="w-full h-full uppercase text-center   ">{children}</p>;
+function StyledNavLink({ children }) {
+  return (
+    <NavLink className="flex items-center gap-0 md:gap-1 text-sx md:text-sm">
+      {children}
+    </NavLink>
+  );
 }
-function Content({ children }) {
-  return <div className="bg-blue-200 w-full h-full ">{children}</div>;
-}
-
 export default Skills;

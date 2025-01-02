@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { variants, variantsLeft } from "../../services/config";
+import { LuCheck } from "react-icons/lu";
 
 const items = ["Management", "Leadership", "Realiability", "Creativity"];
 function Personal() {
@@ -7,13 +8,17 @@ function Personal() {
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={variantsLeft}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      variants={variants}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <ul className="">
         {items.map((el, ndx) => (
-          <li className="text-blue-400" key={ndx}>
-            {el}
+          <li
+            className="text-slate-700 flex font-medium md:text-lg items-center gap-1 md:gap-3 text-sm"
+            key={ndx}
+          >
+            <LuCheck color="#2563eb" />
+            <span>{el}</span>
           </li>
         ))}
       </ul>

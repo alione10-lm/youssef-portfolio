@@ -5,7 +5,7 @@ function Applayout() {
   return (
     <div className="h-screen w-full relative ">
       <Navigation />
-      <main className="py-10 h-full md:py-20 px-10 md:px-36 ">
+      <main className="py-10 h-full md:py-20 px-4  md:px-36 ">
         <Outlet />
       </main>
     </div>

@@ -8,6 +8,7 @@ import Personal from "./pages/skills/Personal";
 import Technical from "./pages/skills/Technical";
 import Professional from "./pages/skills/Professional";
 import Languages from "./pages/skills/Languages";
+import Experiences from "./pages/Experiences";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="languages" element={<Languages />} />
           </Route>
           <Route path="education" element={<Education />} />
+          <Route path="experiences" element={<Experiences />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

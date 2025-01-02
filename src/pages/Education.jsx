@@ -12,7 +12,7 @@ function Education() {
     >
       <Item>
         <Heading>
-          <p className="text-blue-400 font-semibold">
+          <p className="text-blue-700 font-semibold">
             Faculty of Sciences and Techniques of Beni Mellal
           </p>
           <Label>2022-2024</Label>
@@ -24,7 +24,7 @@ function Education() {
       </Item>
       <Item>
         <Heading>
-          <p className="text-blue-400 font-semibold">
+          <p className="text-blue-700 font-semibold">
             Faculty of Sciences and Techniques of Beni Mellal
           </p>
           <Label>2021-2022</Label>
@@ -35,7 +35,7 @@ function Education() {
       </Item>
       <Item>
         <Heading>
-          <p className="text-blue-400 font-semibold">
+          <p className="text-blue-700 font-semibold">
             Casablanca Higher School of Technology
           </p>
           <Label>2019-2021</Label>
@@ -46,7 +46,7 @@ function Education() {
       </Item>
       <Item>
         <Heading>
-          <p className="text-blue-400 font-semibold">
+          <p className="text-blue-700 font-semibold">
             Hight school Moulay Rachid in Kasba Tadla
           </p>
           <Label>2015-2018</Label>
@@ -60,7 +60,7 @@ function Education() {
 }
 function Item({ children }) {
   return (
-    <div className="border  flex flex-col text-slate-600 p-4 cursor-pointer hover:bg-blue-50 transition-all duration-200  rounded-xl text-sm md:text-lg border-blue-400">
+    <div className="border  flex flex-col text-slate-600 p-4 cursor-pointer hover:bg-blue-50 transition-all duration-200  rounded-xl text-sm md:text-lg border-blue-700">
       {children}
     </div>
   );
