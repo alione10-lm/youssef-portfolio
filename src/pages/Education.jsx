@@ -1,6 +1,15 @@
+import { motion } from "motion/react";
+import { variants } from "../services/config";
+
 function Education() {
   return (
-    <div className="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-2 py-20 md:py-20 md:px-16">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      className="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-2 py-20 md:py-20 md:px-16"
+    >
       <Item>
         <Heading>
           <p className="text-blue-400 font-semibold">
@@ -46,7 +55,7 @@ function Education() {
           Baccalaureate in Mathematical Sciences A
         </p>
       </Item>
-    </div>
+    </motion.section>
   );
 }
 function Item({ children }) {

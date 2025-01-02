@@ -1,8 +1,16 @@
+import { motion } from "motion/react";
 import { LuSend } from "react-icons/lu";
+import { variants } from "../services/config";
 
 function Contact() {
   return (
-    <div className="h-full w-full pt-14 md:pt-20">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      className="h-full w-full pt-14 md:pt-20"
+    >
       <div>
         <h1 className="text-center md:mb-6 mb-4 font-semibold text-blue-600 md:text-xl text-sm">
           Get in touch
@@ -87,7 +95,7 @@ function Contact() {
           </form>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 }
 
