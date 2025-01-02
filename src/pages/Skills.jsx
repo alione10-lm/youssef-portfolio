@@ -6,8 +6,14 @@ import { GiSchoolBag } from "react-icons/gi";
 
 function Skills() {
   return (
-    <div className="skills_navigation flex flex-col items-start w-full pt-10  md:pt-20 ">
-      <div className="flex items-center gap-5  text-sm md:text-lg text-slate-400">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      className="skills_navigation flex flex-col divide-y  items-start w-full pt-20 "
+    >
+      <div className="flex items-center gap-5 pb-  text-sm md:text-lg text-slate-400">
         <NavLink className="flex gap-1 items-center" to="personal">
           <LuPersonStanding />
           Peronal
@@ -25,7 +31,7 @@ function Skills() {
       <div className="p-5  w-full min-h-[10rem]">
         <Outlet />
       </div>
-    </div>
+    </motion.section>
     // <motion.section
     //   initial="hidden"
     //   animate="visible"
