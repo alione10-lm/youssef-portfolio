@@ -17,7 +17,7 @@ function Education() {
           </p>
           <Label>2022-2024</Label>
         </Heading>
-        <p className="text-slate-600 text-sm md:text-lg">
+        <p className="text-slate-700 text-sm md:text-lg">
           Master's Degree in Organic Materials, Polymers, and Formulation
           Engineering
         </p>
@@ -29,7 +29,7 @@ function Education() {
           </p>
           <Label>2021-2022</Label>
         </Heading>
-        <p className="text-slate-600 text-sm md:text-lg">
+        <p className="text-slate-700 text-sm md:text-lg">
           Bachelor's Degree in Chemical Engineering of Materials
         </p>
       </Item>
@@ -40,7 +40,7 @@ function Education() {
           </p>
           <Label>2019-2021</Label>
         </Heading>
-        <p className="text-slate-600 text-sm md:text-lg">
+        <p className="text-slate-700 text-sm md:text-lg">
           University Diploma in Technology in Process Engineering
         </p>
       </Item>
@@ -51,7 +51,7 @@ function Education() {
           </p>
           <Label>2015-2018</Label>
         </Heading>
-        <p className="text-slate-600 text-sm md:text-lg">
+        <p className="text-slate-700 text-sm md:text-lg">
           Baccalaureate in Mathematical Sciences A
         </p>
       </Item>
@@ -60,14 +60,14 @@ function Education() {
 }
 function Item({ children }) {
   return (
-    <div className="border  flex flex-col text-slate-600 p-4 cursor-pointer hover:bg-blue-50 transition-all duration-200  rounded-xl text-sm md:text-lg border-blue-700">
+    <div className="shadow-md  flex flex-col text-slate-600 p-4 cursor-pointer hover:bg-blue-50 transition-all duration-200  rounded-md text-sm md:text-lg border-blue-700">
       {children}
     </div>
   );
 }
 function Label({ children }) {
   return (
-    <span className="italic  text-xs text-blue-500 bg-blue-100  w-fit p-1 rounded-md ">
+    <span className="italic  text-xs text-blue-700 bg-blue-100  w-fit p-1 rounded-md ">
       {children}
     </span>
   );

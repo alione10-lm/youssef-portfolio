@@ -14,7 +14,7 @@ function Home() {
       className="w-full flex flex-col-reverse md:flex-row gap-5 py-10 md:px-10  items-center justify-between "
     >
       <div className="flex flex-col gap-2  md:items-start py-2">
-        <h1 className="text-slate-800 text-xl md:text-2xl mb-5 font-semibold">
+        <h1 className="text-slate-800 text-xl md:text-2xl md:mb-5 mb-2 font-semibold">
           Welcome to the PhD student
           <span className="text-blue-600 font-bold ">
             ,Youssef Aitnaceur 👋
@@ -35,7 +35,7 @@ function Home() {
           From Polydisciplinary Faculty , Sultan Moulay Slimane University ,
           Beni Mellal .
         </p>
-        <div className="flex flex-col gap-3 mt-10 ">
+        <div className="flex flex-col gap-3 mt-4 md:mt-10 ">
           <div className="flex items-center  text-xs md:text-sm gap-2 md:gap-4 cursor-pointer hover:text-blue-700 transition-all duration-200">
             <FaLinkedin size={20} />
             <a href="https://www.linkedin.com/in/youssef-aitnaceur-b61874209/">

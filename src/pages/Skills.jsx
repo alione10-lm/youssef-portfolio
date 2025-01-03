@@ -1,8 +1,12 @@
 import { motion } from "motion/react";
 import { variants } from "../services/config";
 import { NavLink, Outlet } from "react-router-dom";
-import { LuLanguages, LuPersonStanding, LuWrench } from "react-icons/lu";
-import { GiSchoolBag } from "react-icons/gi";
+import {
+  LuBriefcaseBusiness,
+  LuLanguages,
+  LuPersonStanding,
+  LuWrench,
+} from "react-icons/lu";
 
 function Skills() {
   return (
@@ -32,7 +36,7 @@ function Skills() {
           to="professional"
           className="text-xs pb-2   border-b flex-col md:flex-row md:text-[1rem] flex items-center gap-1"
         >
-          <GiSchoolBag />
+          <LuBriefcaseBusiness />
           Professional
         </NavLink>
         <NavLink

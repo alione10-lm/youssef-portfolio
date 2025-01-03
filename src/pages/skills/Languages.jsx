@@ -4,7 +4,7 @@ import { variants } from "../../services/config";
 const langauges = [
   { lang: "Arabic", level: "Native" },
   { lang: "French", level: "Advanced (C1)" },
-  { lang: "Arabic", level: " Professional(B2)" },
+  { lang: "English", level: " Professional(B2)" },
 ];
 
 function Languages() {

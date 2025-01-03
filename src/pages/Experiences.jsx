@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { variants } from "../services/config";
-import { LuLocate, LuLocateOff } from "react-icons/lu";
+import { LuCheck, LuLocate, LuLocateOff } from "react-icons/lu";
 
 const data = [
   {
@@ -17,7 +17,7 @@ const data = [
   {
     title: "DUT Internship",
     duration: "2 Months",
-    local: "COSUMAR, OULAD AYAD",
+    local: "Cosumar, Oulad Ayad",
     projectTile:
       "Implementation of Quality Approach and Process Control at PKF Station",
     goals: [
@@ -30,7 +30,7 @@ const data = [
     title: "LST Project",
     duration: "3 Months",
     local: "Faculty of Sciences and techniques Beni Mellal",
-    projectTile: "Modeling a Continuous Distillation Process ‘",
+    projectTile: "Modeling a Continuous Distillation Process ",
     goals: [
       "Studied the characteristics of continuous distillation",
       "Modeled a continuous distillation column with MATLAB",
@@ -58,22 +58,22 @@ function Experiences() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="grid grid-cols-1 py-10 md:py-20   md:grid-cols-2 w-full gap-4"
+      className="grid grid-cols-1 py-10  md:pt-20 gap-4 md:grid-cols-2 w-full "
     >
       {data.map((el, ndx) => (
-        <div className="border md:p-3 p-1 rounded-md border-blue-400" key={ndx}>
-          <div className="flex justify-between md:mb-3 mb-2 items-center">
-            <p className="text-blue-700 font-medium">{el.title}</p>
-            <p className="text-xs md:text-sm text-blue-700 bg-blue-100 rounded-md p-1">
-              {el.duration}
-            </p>
+        <div
+          className="md:p-4  flex flex-col md:border-l border-b  items-start gap-4 cursor-pointer hover:bg-transparent transition-all duration-200"
+          key={ndx}
+        >
+          <div className="font-medium text-blue-700 text-sm md:text-lg">
+            <span className="">{el.projectTile} </span>(<span>{el.title}</span>)
+            , {el.duration} .
           </div>
-          <p className="text-sx md:text-sm text-slate-500 ">{el.local}</p>
-          <p className="text-slate-800">{el.projectTile}</p>
-          <ul className="list-disc ">
+          <span className="text-slate-900">{el.local} .</span>
+          <ul className="flex flex-col gap-1">
             {el.goals.map((goal) => (
-              <li key={ndx} className="text-xs">
-                {goal}
+              <li key={ndx} className="text-slate-600">
+                <span>{goal}.</span>
               </li>
             ))}
           </ul>
