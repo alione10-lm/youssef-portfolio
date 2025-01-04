@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { variants } from "../services/config";
-import { LuCheck, LuLocate, LuLocateOff } from "react-icons/lu";
 
 const data = [
   {
@@ -73,7 +72,7 @@ function Experiences() {
           <ul className="flex flex-col gap-1">
             {el.goals.map((goal) => (
               <li key={ndx} className="text-slate-600">
-                <span>{goal}.</span>
+                <span>- {goal}.</span>
               </li>
             ))}
           </ul>

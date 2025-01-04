@@ -11,24 +11,30 @@ function Home() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="w-full flex flex-col-reverse md:flex-row gap-5 py-10 md:px-10  items-center justify-between "
+      className="w-full flex flex-col-reverse md:flex-row gap-5 pt-10 md:pt-16 md:px-10  items-start justify-between "
     >
       <div className="flex flex-col gap-2  md:items-start py-2">
-        <h1 className="text-slate-800 text-xl md:text-2xl md:mb-5 mb-2 font-semibold">
-          Welcome to the PhD student
-          <span className="text-blue-600 font-bold ">
-            ,Youssef Aitnaceur 👋
-          </span>
+        <h1 className="text-slate-800 text-xl md:text-2xl  mb-2 font-semibold">
+          I'm
+          <span className="text-blue-600 font-bold "> Youssef Aitnaceur</span>
         </h1>
-
         <p className="text-sm md:text-lg text-slate-600">
-          As a student in Organic Materials, Polymers, and Formulation
-          Engineering, I have developed skills to synthesize macromolecules,
-          analyze processes, and implement experimental designs. I am also
-          proficient in industrial management, understanding the thermal
-          properties of materials, and characterizing the thermodynamics of
-          matter. I am motivated to participate in ambitious projects that will
-          allow me to grow both personally and professionally.
+          As a student specializing in Organic Materials, Polymers, and
+          Formulation Engineering, combined with my expertise in Process
+          Engineering, I have developed a versatile skill set that bridges
+          material science and industrial processes. I am adept at synthesizing
+          macromolecules, analyzing complex processes, and designing and
+          implementing experimental setups. My proficiency extends to modeling
+          and optimizing industrial processes, utilizing tools such as Aspen
+          Plus, MATLAB, COMSOL,and OpenLCA, to enhance efficiency and
+          sustainability. I have a strong foundation in industrial management,
+          understanding the thermal and mechanical properties of materials, and
+          characterizing the thermodynamics of matter. This interdisciplinary
+          expertise enables me to approach ambitious projects with a holistic
+          perspective, fostering innovation and ensuring practical, scalable
+          solutions. Motivated to excel, I am eager to contribute to projects
+          that challenge me to grow personally and professionally while
+          addressing real-world challenges.
         </p>
 
         <p className="text-slate-400 text-xs md:text-sm ">
@@ -44,11 +50,13 @@ function Home() {
           </div>
           <div className="flex items-center text-xs md:text-sm  gap-2 md:gap-4 cursor-pointer hover:text-blue-700 transition-all duration-200">
             <MdEmail size={20} />
-            <span>aitnaceuryoussef6@gmail.com</span>
+            <a href="mailto:aitnaceuryoussef6@gmail.com">
+              aitnaceuryoussef6@gmail.com
+            </a>
           </div>
           <div className="flex items-center  text-xs md:text-sm gap-2 md:gap-4 cursor-pointer hover:text-blue-700 transition-all duration-200">
             <BiPhone size={20} />
-            <span>+212 6 90 86 17 83</span>
+            <a href="tel:+1234567890">+212 6 90 86 17 83</a>
           </div>
         </div>
       </div>

@@ -5,49 +5,23 @@ import toast from "react-hot-toast";
 import { useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 
 function Contact() {
-  // const form = useRef();
+  const {
+    reset,
+    formState: { isSubmitting },
+    register,
+    handleSubmit,
+  } = useForm();
+  console.log(isSubmitting);
 
-  const [firstName, setFirstname] = useState("");
-  const [lastName, setlastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  // const templateParams = {
-  //   from_name: firstName,
-  //   from_email: email,
-  //   message: message,
-  // };
-
-  // function sendEmail(e) {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm("oussama_10", "template_sz4mrnr", form.current, {
-  //       publicKey: "uf3cFIi9qU3Ke4C5O",
-  //     })
-  //     .then(
-  //       () => {
-  //         console.log("SUCCESS!");
-  //       },
-  //       (error) => {
-  //         console.log("FAILED...", error.text);
-  //       }
-  //     );
-  // }
-
-  // var templateParams = {
-  //   name: 'James',
-  //   notes: 'Check this out!',
-  // };
-  function sendEmail(e) {
-    e.preventDefault();
-
+  function sendEmail(data) {
+    console.log(data);
     const templateParams = {
-      from_name: firstName,
-      from_email: email,
-      message: message,
+      from_email: data.email,
+      from_name: `${data.firstName} ${data.lastName}`,
+      message: data.message,
     };
 
     emailjs
@@ -60,12 +34,11 @@ function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success(`thanks for your message,${firstName}`);
+          toast.success(`thanks for your message,${data.firstName}`);
           // Handle success (e.g., show a success message)
         },
         (error) => {
           console.error(error.text);
-          // Handle error (e.g., show an error message)
         }
       );
   }
@@ -88,7 +61,7 @@ function Contact() {
             // src="https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             src="/contact.webp"
           />
-          <form className="" onSubmit={sendEmail}>
+          <form className="" onSubmit={handleSubmit(sendEmail)}>
             <div className="grid md:grid-cols-2 md:gap-6">
               <div className="relative z-0 w-full mb-5 group">
                 <input
@@ -98,7 +71,7 @@ function Contact() {
                   className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
-                  onChange={(e) => setFirstname(e.target.value)}
+                  {...register("firstName")}
                 />
                 <label
                   htmlFor="floating_first_name"
@@ -115,7 +88,7 @@ function Contact() {
                   className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
-                  onChange={(e) => setlastname(e.target.value)}
+                  {...register("lastName")}
                 />
                 <label
                   htmlFor="floating_last_name"
@@ -133,7 +106,7 @@ function Contact() {
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
-                onChange={(e) => setEmail(e.target.value)}
+                {...register("email")}
               />
               <label
                 htmlFor="floating_email"
@@ -148,7 +121,7 @@ function Contact() {
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 required
                 placeholder=" "
-                onChange={(e) => setMessage(e.target.value)}
+                {...register("message")}
               />
               <label
                 htmlFor="floating_repeat_password"
@@ -157,6 +130,7 @@ function Contact() {
                 Message
               </label>
             </div>
+
             <button
               type="submit"
               className="text-white flex items-center justify-center gap-2  bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
