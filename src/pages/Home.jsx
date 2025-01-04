@@ -14,7 +14,7 @@ function Home() {
       className="w-full flex flex-col-reverse md:flex-row gap-5 pt-10 md:pt-16 md:px-10  items-start justify-between "
     >
       <div className="flex flex-col gap-2  md:items-start py-2">
-        <h1 className="text-slate-800 text-xl md:text-2xl  mb-2 font-semibold">
+        <h1 className="text-slate-800 text-xl md:text-2xl mb-2 font-semibold">
           I'm
           <span className="text-blue-600 font-bold "> Youssef Aitnaceur</span>
         </h1>
@@ -41,20 +41,20 @@ function Home() {
           From Polydisciplinary Faculty , Sultan Moulay Slimane University ,
           Beni Mellal .
         </p>
-        <div className="flex flex-col gap-3 mt-4 md:mt-10 ">
-          <div className="flex items-center  text-xs md:text-sm gap-2 md:gap-4 cursor-pointer hover:text-blue-700 transition-all duration-200">
+        <div className="flex flex-col gap-2 md:mt-8 ">
+          <div className="flex  items-center  text-xs md:text-sm gap-2 md:gap-3 cursor-pointer hover:text-blue-700 transition-all duration-200">
             <FaLinkedin size={20} />
             <a href="https://www.linkedin.com/in/youssef-aitnaceur-b61874209/">
-              linkedin.com/in/youssef-aitnaceur-b61874209
+              youssef-aitnaceur
             </a>
           </div>
-          <div className="flex items-center text-xs md:text-sm  gap-2 md:gap-4 cursor-pointer hover:text-blue-700 transition-all duration-200">
+          <div className="flex  items-center text-xs md:text-sm  gap-2 md:gap-3 cursor-pointer hover:text-blue-700 transition-all duration-200">
             <MdEmail size={20} />
             <a href="mailto:aitnaceuryoussef6@gmail.com">
               aitnaceuryoussef6@gmail.com
             </a>
           </div>
-          <div className="flex items-center  text-xs md:text-sm gap-2 md:gap-4 cursor-pointer hover:text-blue-700 transition-all duration-200">
+          <div className="flex  items-center  text-xs md:text-sm gap-2 md:gap-3 cursor-pointer hover:text-blue-700 transition-all duration-200">
             <BiPhone size={20} />
             <a href="tel:+1234567890">+212 6 90 86 17 83</a>
           </div>
