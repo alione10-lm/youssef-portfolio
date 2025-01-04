@@ -11,7 +11,7 @@ function Home() {
       animate="visible"
       variants={variants}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="w-full flex flex-col-reverse md:flex-row gap-5 pt-10 md:pt-16 md:px-10  items-start justify-between "
+      className="w-full flex flex-col-reverse md:flex-row gap-4 pt-10 md:pt-16  items-center  md:items-start justify-between "
     >
       <div className="flex flex-col gap-2  md:items-start py-2">
         <h1 className="text-slate-800 text-xl md:text-2xl mb-2 font-semibold">
