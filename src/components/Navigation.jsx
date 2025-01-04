@@ -14,7 +14,7 @@ function Navigation() {
 function StyledLink({ children, to }) {
   return (
     <NavLink
-      className="text-slate-800  hover:bg-blue-600 p-1 hover:text-blue-50  md:px-4 md:py-2 rounded-full transition-all duration-300"
+      className="text-slate-700 font-medium   hover:bg-blue-600 p-1 hover:text-blue-50  md:px-4 md:py-2 rounded-full transition-all duration-300"
       to={to}
     >
       {children}

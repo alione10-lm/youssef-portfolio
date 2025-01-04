@@ -71,7 +71,7 @@ function Contact() {
                   type="text"
                   name="floating_first_name"
                   id="floating_first_name"
-                  className="block transition-all  duration-200 px-2 md:px-5 py-3 rounded-lg w-full border-none bg-slate-100 focus:ring focus:ring-blue-700 focus:outline-none focus:ring-offset-2 text-slate-800"
+                  className="block transition-all w-full duration-200 px-5 py-3 rounded-lg border-none bg-slate-100 focus:ring focus:ring-blue-700 focus:outline-none focus:ring-offset-2 text-slate-800"
                   placeholder="First name"
                   required
                   {...register("firstName")}
