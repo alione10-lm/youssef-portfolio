@@ -60,7 +60,7 @@ function Education() {
 }
 function Item({ children }) {
   return (
-    <div className="shadow-md  flex flex-col text-slate-600 p-4 cursor-pointer hover:bg-blue-50 transition-all duration-200  rounded-md text-sm md:text-lg border-blue-700">
+    <div className="hover:shadow-md  flex flex-col text-slate-600 p-4  border border-gray-200 transition-all duration-200  rounded-md text-sm md:text-lg ">
       {children}
     </div>
   );

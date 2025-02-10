@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <nav className="flex items-center shadow-md  gap-2 text-xs md:text-sm md:gap-4 fixed backdrop-blur-sm bg-transparent left-1/2 -translate-x-1/2 top-4  rounded-full  px-2 py-2 md:px-4 md:py-2">
+    <header className="flex items-center md:shadow-md border md:border-none border-gray-200  gap-2 text-xs md:text-sm md:gap-4 fixed backdrop-blur-sm bg-transparent left-1/2 -translate-x-1/2 top-4  rounded-full  px-4 py-2 md:px-4 md:py-2">
       <StyledLink to="home">Home </StyledLink>
       <StyledLink to="education">Education</StyledLink>
       <StyledLink to="experiences">Experiences</StyledLink>
       <StyledLink to="skills">Skills</StyledLink>
       <StyledLink to="contact">Contact</StyledLink>
-    </nav>
+    </header>
   );
 }
 function StyledLink({ children, to }) {

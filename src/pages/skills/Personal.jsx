@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { variants, variantsLeft } from "../../services/config";
+import { variants } from "../../services/config";
 import { LuCheck } from "react-icons/lu";
 
 const items = ["Management", "Leadership", "Realiability", "Creativity"];

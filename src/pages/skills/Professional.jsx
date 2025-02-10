@@ -3,7 +3,7 @@ import { variants } from "../../services/config";
 import { LuCheck } from "react-icons/lu";
 
 const items = [
-  "Aspen Plus and HYSYS, OpenLCA, MATLAB, Origin Pro, Python, COMSOL and Multiphysics Gaussian",
+  "Aspen Plus and HYSYS, OpenLCA, MATLAB, Origin Pro, Python, COMSOL Multiphysics and Gaussian",
   " Ms Office: Excel, Word, PowerPoint",
   "Adobe: Photoshop, Illustrator",
 ];
