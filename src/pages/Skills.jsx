@@ -23,7 +23,7 @@ function Skills() {
           to="personal"
         >
           <LuPersonStanding />
-          Peronal
+          Personal
         </NavLink>
         <NavLink
           className="text-xs pb-2  border-b flex-col md:flex-row md:text-[1rem] flex items-center gap-1 md:gap-2"

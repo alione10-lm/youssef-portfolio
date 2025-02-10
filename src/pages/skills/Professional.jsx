@@ -3,7 +3,7 @@ import { variants } from "../../services/config";
 import { LuCheck } from "react-icons/lu";
 
 const items = [
-  " Python,MATLAB, Origin, Aspen Plus and HYSYS, COMSOL Multiphysics Gaussian",
+  "Aspen Plus and HYSYS, OpenLCA, MATLAB, Origin Pro, Python, COMSOL Multiphysics Gaussian",
   " Ms Office: Excel, Word, PowerPoint",
   "Adobe: Photoshop, Illustrator",
 ];
@@ -19,10 +19,12 @@ function Professional() {
       <ul>
         {items.map((el, ndx) => (
           <li
-            className="text-slate-700 flex items-center gap-1 md:gap-3 md:text-lg text-[0.8rem] "
+            className="text-slate-700 font-medium flex items-center gap-1 mb-2 md:gap-3 md:text-lg text-[0.8rem] "
             key={ndx}
           >
-            <LuCheck color="#2563eb" />
+            <div>
+              <LuCheck className="" color="#2563eb" />
+            </div>
             <span>{el}</span>
           </li>
         ))}

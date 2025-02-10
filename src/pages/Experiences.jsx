@@ -61,17 +61,17 @@ function Experiences() {
     >
       {data.map((el, ndx) => (
         <div
-          className="md:p-4  flex flex-col md:border-l border-b  items-start gap-4 cursor-pointer hover:bg-transparent transition-all duration-200"
+          className="md:p-4  flex flex-col border border-gray-200 p-2 rounded-lg items-start   hover:bg-transparent transition-all duration-200"
           key={ndx}
         >
-          <div className="font-medium text-blue-700 text-sm md:text-lg">
+          <div className="font-medium text-blue-700 mb-2  text-sm md:text-lg">
             <span className="">{el.projectTile} </span>(<span>{el.title}</span>)
             , {el.duration} .
           </div>
-          <span className="text-slate-900">{el.local} .</span>
+          <span className="text-gray-700 text-sm mb-4">{el.local} .</span>
           <ul className="flex flex-col gap-1">
             {el.goals.map((goal) => (
-              <li key={ndx} className="text-slate-600">
+              <li key={ndx} className="text-sm text-gray-600">
                 <span>- {goal}.</span>
               </li>
             ))}

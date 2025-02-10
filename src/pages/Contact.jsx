@@ -36,7 +36,7 @@ function Contact() {
         (result) => {
           console.log(result.text);
           setIsLoading(false);
-          toast.success(`thanks for your message,${data.firstName}`);
+          toast.success(`thank you ${data.firstName}`);
           reset();
           // Handle success (e.g., show a success message)
         },
@@ -64,7 +64,7 @@ function Contact() {
             // src="https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             src="/contact.webp"
           />
-          <form className="" onSubmit={handleSubmit(sendEmail)}>
+          <form className="mb-4" onSubmit={handleSubmit(sendEmail)}>
             <div className="grid md:grid-cols-2 md:gap-6">
               <div className="relative z-0 w-full mb-5 group">
                 <input
@@ -146,10 +146,13 @@ function Contact() {
             <button
               type="submit"
               disabled={isLoading}
-              className="text-white disabled:cursor-not-allowed flex items-center justify-center gap-2  bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white disabled:cursor-not-allowed flex items-center justify-center gap-2 md:w-full  bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               {isLoading ? (
-                <>sending . . .</>
+                <>
+                  sending
+                  <div className="size-4 border-2  border-t-blue-500 border-gray-300 rounded-full animate-spin"></div>
+                </>
               ) : (
                 <>
                   send

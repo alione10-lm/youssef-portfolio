@@ -41,11 +41,11 @@ function Technical() {
 }
 function Item({ title, content }) {
   return (
-    <div className="">
+    <div className="border border-gray-200 p-2 rounded-lg">
       <p className="font-semibold mb-2 md:mb-4 text-sm md:text-[1rem] text-blue-700">
         {title}
       </p>
-      <ul className="flex divide-y  flex-col  items-start  ">
+      <ul className="flex divide-y divide-gray-100   flex-col  items-start  ">
         {content.map((el, ndx) => (
           <li key={ndx} className=" py-2 text-slate-700 text-sm md:text-[1rem]">
             {el}.

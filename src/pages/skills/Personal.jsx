@@ -14,7 +14,7 @@ function Personal() {
       <ul className="">
         {items.map((el, ndx) => (
           <li
-            className="text-slate-700 flex md:text-lg items-center gap-1 md:gap-3 text-sm"
+            className="text-slate-700 font-medium flex md:text-lg items-center gap-1 md:gap-3 text-sm"
             key={ndx}
           >
             <LuCheck color="#2563eb" />
